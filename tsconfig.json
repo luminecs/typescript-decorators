@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES5", // 目标 JavaScript 版本
+    "module": "commonjs", // 模块系统
+    "outDir": "./dist", // 输出目录
+    "rootDir": "./src", // 源代码目录
+    "strict": true, // 启用严格类型检查
+    "experimentalDecorators": true, // 启用装饰器
+    "emitDecoratorMetadata": true, // 启用元数据发射（若使用 reflect-metadata）
+    "esModuleInterop": true, // 模块互操作性
+    "skipLibCheck": true // 跳过库检查
+  },
+  "include": ["src/**/*"], // 包含 src 目录下的所有文件
+  "exclude": ["node_modules"] // 排除 node_modules
+}
