@@ -7,10 +7,8 @@ function logClass(target: Function) {
 
 // 使用装饰器
 @logClass
-class Person {
+export class Person {
   name: string = 'Alice'
 }
-
-const person = new Person()
 
 // @logClass 是装饰器语法，target 是被装饰的类的构造函数。
