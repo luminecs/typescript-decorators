@@ -3,6 +3,8 @@ import { Person } from './class-decorator.js'
 import { User } from './field-decorator.js'
 import { Example } from './parameter-decorator.js'
 import { API, Customer } from './decorator-factory.js'
+import { AdminPanel } from './auth-demo.js'
+import { Product } from './reflect-metadata.js'
 
 console.log('\n========== Class Decorator ==========\n')
 
@@ -32,3 +34,12 @@ console.log((customer as any).metadata)
 const api = new API()
 api.fetchData().then(console.log).catch(console.error)
 
+console.log('\n========== auth demo ==========\n')
+
+const panel = new AdminPanel()
+panel.deleteUser(1) // 输出: User 1 deleted
+
+console.log('\n========== reflect-metadata ==========\n')
+
+const prod = new Product()
+console.log(Reflect.getMetadata('type', prod, 'price')) // 输出: premium
